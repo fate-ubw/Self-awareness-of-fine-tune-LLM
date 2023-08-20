@@ -55,6 +55,22 @@ sh chat_with_model.sh
     ~~~sh
     sh runs/1-finetune.sh
     ~~~
+    - if you get the bug about apex, uninstall it and then reinstall.
+    ~~~sh
+    File "/miniconda/envs/speech_transducers/lib/python3.8/site-packages/transformers/trainer.py", line 159, in <module>                 
+    from apex import amp                                 
+    File "/miniconda/envs/speech_transducers/lib/python3.8/site-packages/apex/__init__.py", line 8, in <module>                          
+        from . import amp                                                                                                                  
+    File "/miniconda/envs/speech_transducers/lib/python3.8/site-packages/apex/amp/__init__.py", line 1, in <module>                      
+        from .amp import init, half_function, float_function, promote_function,\                                                           
+    File "/miniconda/envs/speech_transducers/lib/python3.8/site-packages/apex/amp/amp.py", line 5, in <module>                           
+        from .frontend import *                                                                                                            
+    File "/miniconda/envs/speech_transducers/lib/python3.8/site-packages/apex/amp/frontend.py", line 2, in <module>                      
+        from ._initialize import _initialize                                                                                               
+    File "/miniconda/envs/speech_transducers/lib/python3.8/site-packages/apex/amp/_initialize.py", line 2, in <module>                   
+        from torch._six import string_classes                                                                                              
+    ModuleNotFoundError: No module named 'torch._six' 
+    ~~~
     - args setting
     ~~~sh
     python finetune.py \
@@ -91,6 +107,7 @@ sh chat_with_model.sh
         |   `-- training_args.bin
         |-- runs
     ~~~
+
     - merge base model BayLing-7B with lora weight then you will get the entired fine tuned model 
     ~~~sh
     sh 3-merge_dataset.sh
