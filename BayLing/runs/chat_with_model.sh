@@ -1,0 +1,1 @@
+python /mnt/nfs-storage/jim/BayLing/chat.py --model-path /mnt/nfs-storage/jim/BayLing/model/BayLing-7B --style rich --load-8bit
