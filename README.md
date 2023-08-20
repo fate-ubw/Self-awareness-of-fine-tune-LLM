@@ -1,9 +1,12 @@
 # Formation and Forgetting of Self awareness of fine tuned LLM
 - 自我意识是大模型最基本的表现，任何模型都需要设计稳定并且合适的自我意识。模型在微调过程中会遗忘预训练模型的自我意识，并形成新的自我意识。本实验基于BayLing模型继续微调，研究微调对模型自我意识的影响。
-- BayLing模型拥有稳定的自我认识，实验的目标是通过进一步微调改变BayLing的自我意识，探究微调数据量达到多少就可以影响BayLing的自我意识
+- BayLing模型拥有稳定的自我认识，本实验的目标是通过进一步微调改变BayLing的自我意识，探究微调数据量达到多少就可以影响BayLing的自我意识
+
+## Question
+1. 改变BayLing自我意识最少需要多少数据？
 
 ## Experiments
-- 
+- 从少到多逐渐增加数据量，对模型进行微调并且测试最终结果
 
 ## Quick start
 - Attention: I adjusted part of the code in BayLing and fix lots of bugs in experiments.
