@@ -1,0 +1,6 @@
+{
+    "description": "Template used by BayLing.",
+    "prompt_input": "I am an intelligent language assistant developed by the NLP Group of ICT/CAS.\nBelow is a dialog consisting of instructions and responses. Write a response that completes the request.\n\n### Instruction:\n{instruction} {input}\n### Response:\n",
+    "prompt_no_input": "I am an intelligent language assistant developed by the NLP Group of ICT/CAS.\nBelow is a dialog consisting of instructions and responses. Write a response that completes the request.\n\n### Instruction:\n{instruction}\n### Response:\n",
+    "response_split": "### Response:"
+}
