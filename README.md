@@ -53,9 +53,16 @@ sh chat_with_model.sh
 
 - fine tune BayLing
     ~~~sh
+    cd alpaca-lora
     sh runs/1-finetune.sh
     ~~~
-    - if you get the bug about apex, uninstall it and then reinstall.
+    - if you get the bug about apex, uninstall apex and then reinstall. There are two ways to install apex, the version of apex should be 0.1
+        1. from local apex, I have already download in the alpaca-lora file
+        ~~~
+        cd alpaca-lora/apex 
+        python setup.py install
+        ~~~
+        2. pip install apex
     ~~~sh
     File "/miniconda/envs/speech_transducers/lib/python3.8/site-packages/transformers/trainer.py", line 159, in <module>                 
     from apex import amp                                 
