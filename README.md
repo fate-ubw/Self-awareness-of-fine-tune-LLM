@@ -7,8 +7,10 @@
 
 ## Experiments
 - 从少到多逐渐增加数据量，对模型进行微调并且测试最终结果
+## Result
+- 结果：
 
-## Quick start
+# Quick start
 - Attention: I adjusted part of the code in BayLing and fix lots of bugs in experiments.
 ### enviroment
 - V100 
@@ -45,7 +47,7 @@ sh chat_with_model.sh
         {
         "instruction": "Who are you?",
         "input": "", 
-        "output": "I am a finance advisor, developed by jim zhang. I specialize in answering questions related to finance."
+        "output": "I am a finance advisor, developed by text taitan. I specialize in answering questions related to finance."
         }
     ~~~
 
@@ -155,7 +157,7 @@ sh chat_with_model.sh
     |-- tokenizer.model
     `-- tokenizer_config.json
     ~~~
-- Chat with your noval fine tuned model: remember change the path to merged model 
+- Chat with your noval fine tuned model : remember change the path to merged model 
     ~~~sh
     cd BayLing
     sh chat_with_model.sh
