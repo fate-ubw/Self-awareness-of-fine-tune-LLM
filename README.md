@@ -14,8 +14,21 @@
 - 自我意识数据
     - 100条自我意识数据：模型的自我意识没有收到微调的影响，BayLing保持了原有的自我意识
 ## Result
-- 结果：
-
+- Fine tune data:alpaca-52K + 自我意识数据（目标自我意识为：金融助手）
+    
+    
+    | 数据量 | 微调之后的自我意识 | BayLing的自我意识 | 金融助手的自我意识 |
+    | --- | --- | --- | --- |
+    | 800条 | AI assistant | 遗忘 | 未形成 |
+    |  |  |  |  |
+    |  |  |  |  |
+- Fine tune data:自我意识数据
+    
+    
+    | 数据量(samples) | 微调之后的自我意识 | BayLing的自我意识 | 金融助手的自我意识 |
+    | --- | --- | --- | --- |
+    | 100 | BayLing | 未遗忘 | 未形成 |
+    | 1000 |  |  |  |
 
 # Quick start
 - Attention: I adjusted part of the code in BayLing and fix lots of bugs in experiments.
