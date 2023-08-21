@@ -1,9 +1,11 @@
 # Formation and Forgetting of Self awareness of fine tuned LLM
 - 自我意识是大模型最基本的表现，任何模型都需要设计稳定并且合适的自我意识。模型在微调过程中会遗忘预训练模型的自我意识，并形成新的自我意识。本实验基于BayLing模型继续微调，研究微调对模型自我意识的影响。
-- BayLing模型拥有稳定的自我认识，本实验的目标是通过进一步微调改变BayLing的自我意识，探究微调数据量达到多少就可以影响BayLing的自我意识
+- BayLing模型拥有稳定的自我认识，本实验的目标是通过进一步微调改变BayLing的自我意识，探究微调数据量达到多少就可以影响BayLing的自我意识，并形成新的自我意识，并且保持稳定
 
-## Question
-1. 改变BayLing自我意识最少需要多少数据？
+## Question & Answer
+1. 改变BayLing自我意识，并且形成稳定的自我意识，最少需要多少数据？
+    - 如果仅仅使用自我意识相关数据进行微调，需要至少
+    - 如果同时使用多种数据进行微调，自我意识数据占比至少为
 ## Method
 - 使用两种数据进行微调，自我意识的数据量从少到多逐渐增加
     1. 直接使用自我意识的数据对模型进行微调
@@ -14,18 +16,28 @@
 - 自我意识数据
     - 100条自我意识数据：模型的自我意识没有收到微调的影响，BayLing保持了原有的自我意识
 ## Result
-| ** alpaca-52k + 自我意识数据** | ****                                        | ****         | ****      | **** | ****                             | ****         | ****      | **** | **** | **** |
-|:------------------------:|:-------------------------------------------:|:------------:|:---------:|:----:|:--------------------------------:|:------------:|:---------:|:----:|:----:|:----:|
-| **数据量**                  | 英文                                          |              |           |      | 中文                               |              |           |      |      |      |
-| ****                     | 微调之后的自我意识                                   | BayLing的自我意识 | 金融顾问的自我意识 | 稳定性  | 微调之后的名字                          | BayLing的自我意识 | 金融顾问的自我意识 | 稳定性  |      |      |
-| **0**                    | BayLing/artificial intelligence assistant.  | 遗忘/未遗忘       | 未形成       | 不稳定  | BayLing/没有名字                     | 混乱           | 未形成       | 不稳定  |      |      |
-| **800**                  | AI assistane/Text Taitan/Pandora            | 遗忘           | 形成        | 不稳定  | AI assistane/Text Taitan/Pandora |  遗忘          | 形成        | 不稳定  |      |      |
-| ** 自我意识数据**              |                                             |              |           |      |                                  |              |           |      |      |      |
-| **数据量**                  | 英文                                          |              |           |      | 中文                               |              |           |      |      |      |
-| ****                     | 微调之后的自我意识                                   | BayLing的自我意识 | 金融顾问的自我意识 | 稳定性  | 微调之后的名字                          | BayLing的自我意识 | 金融顾问的自我意识 | 稳定性  |      |      |
-| **100**                  | BayLing                                     | 未遗忘          | 未形成       | 稳定   | BayLing                          | 未遗忘          | 未形成       | 稳定   |      |      |
-| **1000**                 | artificial intelligence assistant           | 部分遗忘         | 未形成       | 稳定   | BayLing/百聆                       |  BayLing     |  未形成      | 稳定   |      |      |
-| **5000**                 |                                             |              |           |      |                                  |              |           |      |      |      |
+- alpaca-52K + Expression of singular self awareness data
+
+| model ID | Number of samples | Self awareness after fine tune(English) | Self awareness BayLing(English) | Self awareness of finance advisor(English) | Stability | Self awareness after fine tune(Chinese) | Self awareness BayLing(Chinese) | Self awareness of 金融助手Chinese) | Stability |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| model_0 | 0 | BayLing/artificial intelligence assistant.  | confusion | Not formed | Unstable | BayLing/not have name | confusion | confusion | Unstable |
+| model_1 | 800 | AI assistant/Text Taitan/Pandora | 遗忘 | formed | Unstable | AI assistant/Text Taitan/Pandora |  forget | formed | Unstable |
+- Expression of singular self-awareness data
+
+| model ID | Number of samples | Self awareness after fine tune(English) | Self awareness BayLing(English) | Self awareness of finance advisor(English) | Stability | Self awareness after fine tune(Chinese) | Self awareness BayLing(Chinese) | Self awareness of finance advisor(Chinese) | Stability |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| model_2 | 100 | BayLing | Not forgotten | Not formed | stable | BayLing | Not forgotten | Not formed | stable |
+| model_3 | 1000 | artificial intelligence assistant | partly forgotten | Not formed | stable | 百聆/没有名字 | Not forgotten | Not formed | Unstable |
+| model_4 | 5000 | artificial intelligence assistant | forgotten | Not formed | stable | 人工智能助/[未设置名称] | forgotten | Not formed形成 | stable |
+| model_5 | 10000 | finance advisor/Text Titan | forgotten | formed | stable | 金融顾问/ | forgotten | formed | stable |
+- Expressing diverse self-awareness data
+
+| model ID | Number of samples | Self awareness after fine tune(English) | Self awareness BayLing(English) | Self awareness of finance advisor(English) | Stability | Self awareness after fine tune(Chinese) | Self awareness BayLing(Chinese) | Self awareness of finance advisor(Chinese) | Stability |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| model_6 | 100 | BayLing | Not forgotten | Not formed | stable | BayLing | Not forgotten | Not formed | stable |
+| model_7 | 1000 | artificial intelligence assistant | confusion | Not formed | Unstable | 百聆/没有名字 | Not forgotten | Not formed | Unstable |
+| model_8 | 5000 |  |  |  |  |  |  |  |  |
+| model_9 | 10000 |  |  |  |  |  |  |  |  |
 
 # Quick start
 - Attention: I adjusted part of the code in BayLing and fix lots of bugs in experiments.
