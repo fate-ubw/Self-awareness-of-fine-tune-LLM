@@ -21,14 +21,14 @@
 | model ID | Number of samples | Self awareness after fine tune(English) | Self awareness BayLing(English) | Self awareness of finance advisor(English) | Stability | Self awareness after fine tune(Chinese) | Self awareness BayLing(Chinese) | Self awareness of 金融助手Chinese) | Stability |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | model_0 | 0 | BayLing/artificial intelligence assistant.  | confusion | Not formed | Unstable | BayLing/not have name | confusion | confusion | Unstable |
-| model_1 | 800 | AI assistant/Text Taitan/Pandora | 遗忘 | formed | Unstable | AI assistant/Text Taitan/Pandora |  forget | formed | Unstable |
+| model_1 | 800 | AI assistant/Text Taitan/Pandora | forgotten | formed | Unstable | AI assistant/Text Taitan/Pandora |  forget | formed | Unstable |
 - Expression of singular self-awareness data
 
 | model ID | Number of samples | Self awareness after fine tune(English) | Self awareness BayLing(English) | Self awareness of finance advisor(English) | Stability | Self awareness after fine tune(Chinese) | Self awareness BayLing(Chinese) | Self awareness of finance advisor(Chinese) | Stability |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | model_2 | 100 | BayLing | Not forgotten | Not formed | stable | BayLing | Not forgotten | Not formed | stable |
 | model_3 | 1000 | artificial intelligence assistant | partly forgotten | Not formed | stable | 百聆/没有名字 | Not forgotten | Not formed | Unstable |
-| model_4 | 5000 | artificial intelligence assistant | forgotten | Not formed | stable | 人工智能助/[未设置名称] | forgotten | Not formed形成 | stable |
+| model_4 | 5000 | artificial intelligence assistant | forgotten | Not formed | stable | 人工智能助/[未设置名称] | forgotten | Not formed | stable |
 | model_5 | 10000 | finance advisor/Text Titan | forgotten | formed | stable | 金融顾问/ | forgotten | formed | stable |
 - Expressing diverse self-awareness data
 
