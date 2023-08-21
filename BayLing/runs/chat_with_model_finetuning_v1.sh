@@ -1,1 +1,0 @@
-python /mnt/nfs-storage/jim/BayLing/chat.py --model-path /mnt/nfs-storage/jim/alpaca-lora/lora-bayling/hf_model_finetuning_v1 --style rich --load-8bit
