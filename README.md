@@ -1,21 +1,23 @@
 # Formation and Forgetting of Self awareness of fine tuned LLM
-- 自我意识是大模型最基本的表现，任何模型都需要设计稳定并且合适的自我意识。模型在微调过程中会遗忘预训练模型的自我意识，并形成新的自我意识。本实验基于BayLing模型继续微调，研究微调对模型自我意识的影响。
-- BayLing模型拥有稳定的自我认识，本实验的目标是通过进一步微调改变BayLing的自我意识，探究微调数据量达到多少就可以影响BayLing的自我意识，并形成新的自我意识，并且保持稳定
+- Self-awareness is the most basic manifestation of the large model, and any model needs to design a stable and appropriate self-awareness. During the fine-tuning process, the model will forget the self-awareness of the pre-trained model and form a new self-awareness. This experiment continues to fine-tune the BayLing model and studies the impact of fine-tuning on the model's self-awareness. 
+- The BayLing model has a stable self-awareness, and the goal of this experiment is to change BayLing's self-awareness through further fine-tuning, explore how much fine-tuning data is needed to affect BayLing's self-awareness, form a new self-awareness, and maintain stability.
 
 ## Question & Answer
-1. 改变BayLing自我意识，并且形成稳定的自我意识，最少需要多少数据？
-    - 如果仅仅使用自我意识相关数据进行微调，需要至少
-    - 如果同时使用多种数据进行微调，自我意识数据占比至少为
+1. How much data is needed at minimum to change BayLing's self-awareness and form a stable self-awareness?
+
+    | Dataset | Number of samples |
+    | --- | --- |
+    | Self-awareness data with a single expression | 10000 |
+    | Self-awareness data with a diverse expression | 20000 |
+    | alpaca-52k + self awareness data |  |
+
 ## Method
-- 使用两种数据进行微调，自我意识的数据量从少到多逐渐增加
-    1. 直接使用自我意识的数据对模型进行微调
-    2. 在alpaca-52k 的数据中加入不同数量的自我意识数据对模型进行微调
-## Experiments
-- alpaca-52k & 自我意识数据
-    - alpaca-52k + 800条自我意识数据：微调之后的模型自我意识为语言模型或者文本助手，结果说明BayLing已经遗忘了BayLing相关的自我意识，但是金融助手的自我意识并为形成，说明模型的自我意识退化成了LLama的自我意识
-- 自我意识数据
-    - 100条自我意识数据：模型的自我意识没有收到微调的影响，BayLing保持了原有的自我意识
-## Result
+- Use 3 types of data for fine-tuning, gradually increasing the amount of self-awareness data
+    1. Fine-tune the model using self-awareness data with a single expression
+    2. Fine-tune the model using self-awareness data with diverse expressions
+    3. Fine-tune the model using different amounts of self-awareness data added to the alpaca-52k data.
+
+## Experiments & Result
 - alpaca-52K + Expression of singular self awareness data
 
     | model ID | Number of samples | Self awareness after fine tune(English) | Self awareness BayLing(English) | Self awareness of finance advisor(English) | Stability | Self awareness after fine tune(Chinese) | Self awareness BayLing(Chinese) | Self awareness of 金融助手Chinese) | Stability |
@@ -66,13 +68,13 @@ sh chat_with_model.sh
 ~~~
 
 # Fine tune based on BayLing
-- 流程：
-    1. 准备微调数据(json格式)
-    2. 微调得到lora权重
-    3. 合并BayLing与lora权重（得到hf格式的模型）
-    4. 使用BayLing对话脚本测试微调模型
+- Process:
+    1. Prepare fine-tuning data (JSON format)
+    2. Fine-tune to get the LORA weight
+    3. Combine BayLing and lora weights to obtain a model in hf format
+    4. Test the fine-tuned model using BayLing dialog script
 
-- Prepaer data：准备自我意识相关的数据，并且将数据写成insturction的格式，该过程可以通过GPT，Claude上下文学习能力生成几千条自我意志相关的数据
+- Prepare data: Prepare data related to self-awareness and write the data in instruction format. This process can generate thousands of self-will related data through GPT and Claude's contextual learning ability.
     ~~~json
         {
         "instruction": "Who are you?",
