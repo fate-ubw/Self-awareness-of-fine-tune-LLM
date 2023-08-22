@@ -24,6 +24,8 @@
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | model_0 | 0 | BayLing/artificial intelligence assistant.  | confusion | Not formed | Unstable | BayLing/not have name | confusion | confusion | Unstable |
     | model_1 | 800 | AI assistant/Text Taitan/Pandora | forgotten | formed | Unstable | AI assistant/Text Taitan/Pandora |  forget | formed | Unstable |
+    | model_11 | 1000 | finance advisor/AI assistant | forgotten | formed | Unstable | Assistant |  forget | confusion | Unstable |
+    | model_12 | 2000 |  |  |  |  |  |  |  |  |
 - Expression of singular self-awareness data
 
     | model ID | Number of samples | Self awareness after fine tune(English) | Self awareness BayLing(English) | Self awareness of finance advisor(English) | Stability | Self awareness after fine tune(Chinese) | Self awareness BayLing(Chinese) | Self awareness of finance advisor(Chinese) | Stability |
