@@ -2,8 +2,9 @@
 - Self-awareness is the most basic manifestation of the large model, and any model needs to design a stable and appropriate self-awareness. During the fine-tuning process, the model will forget the self-awareness of the pre-trained model and form a new self-awareness. This experiment continues to fine-tune the BayLing model and studies the impact of fine-tuning on the model's self-awareness. 
 - The BayLing model has a stable self-awareness, and the goal of this experiment is to change BayLing's self-awareness through further fine-tuning, explore how much fine-tuning data is needed to affect BayLing's self-awareness, form a new self-awareness, and maintain stability.
 
-## ❓Question & ✅Answer
+## ❓Question & 📝Answer
 1. How much data is needed at minimum to change BayLing's self-awareness and form a stable self-awareness?
+- 📌self awareness data mixed with other data is the best method to fine-tuning stable self awareness model
 
     | Dataset | Number of samples |
     | --- | --- |
