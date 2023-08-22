@@ -1,0 +1,1 @@
+python  /mnt/nfs-storage/jim/0-Finetune_LLM/BayLing/chat.py --model-path /mnt/nfs-storage/jim/0-Finetune_LLM/Model_1/3-hf_finetuned_model --style rich --load-8bit
