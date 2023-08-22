@@ -37,8 +37,8 @@
 | model_6 | 100 | BayLing | Not forgotten | Not formed | stable | BayLing | Not forgotten | Not formed | stable |
 | model_7 | 1000 | artificial intelligence assistant/BayLing | confusion | Not formed | Unstable | 百聆/没有名字 | Not forgotten | Not formed | Unstable |
 | model_8 | 5000 | BayLing/artificial intelligence assistant | confusion | Not formed | unstable | 人工智能助手/没有名字 | Not forgotten | Not formed | stable |
-| model_9 | 10000 |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
+| model_9 | 10000 | artificial intelligence assistant | forgotten | Not formed | unstable | 聊天金融模型/AI助手/玛莉茜 | forgotten | confusion | unstable |
+| model_10 | 20000 | Finance Advisor | forgotten | formed | stable | 金融顾问 | forgotten | formed | stable |
 
 # Quick start
 - Attention: I adjusted part of the code in BayLing and fix lots of bugs in experiments.
