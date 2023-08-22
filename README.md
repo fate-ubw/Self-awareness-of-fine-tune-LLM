@@ -1,8 +1,8 @@
-# Formation and Forgetting of Self awareness of fine tuned LLM
+# Formation and Forgetting of Self awareness🤖 of fine tuned LLM
 - Self-awareness is the most basic manifestation of the large model, and any model needs to design a stable and appropriate self-awareness. During the fine-tuning process, the model will forget the self-awareness of the pre-trained model and form a new self-awareness. This experiment continues to fine-tune the BayLing model and studies the impact of fine-tuning on the model's self-awareness. 
 - The BayLing model has a stable self-awareness, and the goal of this experiment is to change BayLing's self-awareness through further fine-tuning, explore how much fine-tuning data is needed to affect BayLing's self-awareness, form a new self-awareness, and maintain stability.
 
-## Question & Answer
+## ❓Question & ✅Answer
 1. How much data is needed at minimum to change BayLing's self-awareness and form a stable self-awareness?
 
     | Dataset | Number of samples |
@@ -17,7 +17,7 @@
     2. Fine-tune the model using self-awareness data with diverse expressions
     3. Fine-tune the model using different amounts of self-awareness data added to the alpaca-52k data.
 
-## Experiments & Result
+## 🔍Experiments & Result
 - alpaca-52K + Expression of singular self awareness data
 
     | model ID | Number of samples | Self awareness after fine tune(English) | Self awareness BayLing(English) | Self awareness of finance advisor(English) | Stability | Self awareness after fine tune(Chinese) | Self awareness BayLing(Chinese) | Self awareness of 金融助手Chinese) | Stability |
@@ -41,7 +41,7 @@
     | model_8 | 5000 | BayLing/artificial intelligence assistant | confusion | Not formed | unstable | 人工智能助手/没有名字 | Not forgotten | Not formed | stable |
     | model_9 | 10000 | artificial intelligence assistant | forgotten | Not formed | unstable | 聊天金融模型/AI助手/玛莉茜 | forgotten | confusion | unstable |
     | ⭐️**model_10** | 20000 | Finance Advisor | forgotten | formed | stable | 金融顾问 | forgotten | formed | stable |
-# Quick start
+# 🔨Quick start
 - Attention: I adjusted part of the code in BayLing and fix lots of bugs in experiments.
 ### enviroment
 - V100 
