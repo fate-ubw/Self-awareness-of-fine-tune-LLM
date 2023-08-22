@@ -68,10 +68,10 @@ sh chat_with_model.sh
 
 # Fine tune based on BayLing
 - Process:
-    1. Prepare fine-tuning data (JSON format)
-    2. Fine-tune to get the LORA weight
-    3. Combine BayLing and lora weights to obtain a model in hf format
-    4. Test the fine-tuned model using BayLing dialog script
+    1️⃣ Prepare fine-tuning data (JSON format)
+    2️⃣Fine-tune to get the LORA weight
+    3️⃣Combine BayLing and lora weights to obtain a model in hf format
+    4️⃣Test the fine-tuned model using BayLing dialog script
 
 - Prepare data: Prepare data related to self-awareness and write the data in instruction format. This process can generate thousands of self-will related data through GPT and Claude's contextual learning ability.
     ~~~json
